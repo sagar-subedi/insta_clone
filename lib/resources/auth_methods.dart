@@ -60,6 +60,8 @@ class AuthMethods {
     return res;
   }
 
+
+
   //logging in user
   Future<String> loginUser({
     required String email,
@@ -80,4 +82,11 @@ class AuthMethods {
     }
     return res;
   }
+
+  Future<void> signOut() async {
+    await _auth.signOut();
+  }
 }
+
+
+
